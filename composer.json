@@ -1,0 +1,43 @@
+{
+    "name": "dtk/service",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "A",
+            "email": "a@a.ru",
+            "homepage": "duotek.ru"
+        }
+    ],
+    "homepage": "https://github.com/dtk/service",
+    "keywords": ["Laravel", "Service"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DTK\\Service\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DTK\\Service\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DTK\\Service\\ServiceServiceProvider"
+            ],
+            "aliases": {
+                "Service": "DTK\\Service\\Facades\\Service"
+            }
+        }
+    }
+}
